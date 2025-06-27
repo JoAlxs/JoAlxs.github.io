@@ -1,0 +1,76 @@
+
+<!-- Language Selector -->
+<div class="fixed top-6 right-6 print:hidden">
+  <a href="/cv" class="text-sm px-3 py-2 bg-gray-200 rounded-l hover:bg-gray-300">🇪🇸 Español</a>
+  <a href="/en/cv" class="text-sm px-3 py-2 bg-gray-200 rounded-r hover:bg-gray-300">🇬🇧 English</a>
+</div>
+
+---
+import "../../styles/global.css";
+title: "Currículum tipo Harvard";
+---
+
+<div class="max-w-3xl mx-auto px-6 py-12 bg-white shadow-md rounded-lg print:shadow-none print:px-0 print:py-0 print:max-w-full">
+  <header class="mb-10 border-b pb-4">
+    <h1 class="text-4xl font-bold">Nombre Apellido</h1>
+    <p><strong>Email:</strong> nombre@ejemplo.com</p>
+    <p><strong>Teléfono:</strong> +52 123 456 7890</p>
+    <p><strong>Dirección:</strong> Ciudad, Estado, País</p>
+  </header>
+
+  <section class="mb-6">
+    <h2>Perfil</h2>
+    <p>Profesional proactivo/a con experiencia en [campo]. Apasionado/a por [temas clave]. En busca de oportunidades para contribuir en proyectos desafiantes.</p>
+  </section>
+
+  <section class="mb-6">
+    <h2>Educación</h2>
+    <ul>
+      <li><strong>Universidad de Ejemplo</strong> – Licenciatura en Algo (2020-2024)</li>
+    </ul>
+  </section>
+
+  <section class="mb-6">
+    <h2>Experiencia Laboral</h2>
+    <ul>
+      <li><strong>Empresa X</strong> – Puesto (Ene 2023 – Dic 2023)
+        <ul class="list-disc list-inside">
+          <li>Responsabilidad o logro clave 1</li>
+          <li>Responsabilidad o logro clave 2</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section class="mb-6">
+    <h2>Habilidades</h2>
+    <ul class="columns-2">
+      <li>Habilidad 1</li>
+      <li>Habilidad 2</li>
+      <li>Habilidad 3</li>
+      <li>Habilidad 4</li>
+    </ul>
+  </section>
+
+  <section class="mb-6">
+    <h2>Idiomas</h2>
+    <ul>
+      <li>Español (Nativo)</li>
+      <li>Inglés (Avanzado)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Referencias</h2>
+    <p>Disponibles a solicitud.</p>
+  </section>
+</div>
+
+
+<!-- Botón flotante para imprimir -->
+<button
+  onclick="window.print()"
+  class="fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition print:hidden"
+>
+  Descargar PDF
+</button>

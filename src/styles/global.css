@@ -1,0 +1,64 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos adicionales */
+body {
+  @apply bg-white text-gray-800 leading-relaxed antialiased;
+}
+
+h1 {
+  @apply text-4xl font-bold mb-4 text-gray-900;
+}
+
+h2 {
+  @apply text-2xl font-semibold mt-8 mb-2 text-gray-800;
+}
+
+ul {
+  @apply list-disc pl-5;
+}
+
+p {
+  @apply mb-2;
+}
+
+a {
+  @apply text-blue-600 hover:underline;
+}
+
+
+@media print {
+  body {
+    @apply bg-white text-black;
+    font-size: 12pt;
+  }
+
+  html, body {
+    width: 210mm;
+    height: 297mm;
+  }
+
+  * {
+    box-shadow: none !important;
+  }
+
+  .print\:shadow-none {
+    box-shadow: none !important;
+  }
+
+  .print\:px-0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .print\:py-0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .print\:max-w-full {
+    max-width: 100% !important;
+  }
+}

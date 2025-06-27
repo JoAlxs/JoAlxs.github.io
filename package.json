@@ -10,9 +10,11 @@
     "deploy": "npm run build && npx gh-pages -d dist"
   },
   "dependencies": {
-    "astro": "^5.6.1"
+    "astro": "^5.6.1",
+    "pocketbase": "^0.26.0"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "tailwindcss": "^4.1.4"
   }
 }

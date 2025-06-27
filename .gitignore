@@ -1,6 +1,7 @@
 .env
 .astro
 .DS_Store
+bun.lock
 
 /dist
 /node_modules

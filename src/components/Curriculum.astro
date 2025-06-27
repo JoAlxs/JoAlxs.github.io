@@ -1,0 +1,155 @@
+---
+const experiencia = [
+  {
+    puesto: "Líder de desarrollo, Campus Digitales",
+    empresa: "Academia Global (Remoto)",
+    fecha: "Nov 2023 – Presente",
+    responsabilidades: [
+      "Liderazgo y desarrollo del talento humano en el subdepartamento Campus Digitales.",
+      "Modularización del código de las plataformas.",
+      "Gestión estratégica de proyectos y consultoría en la operación del subdepartamento Campus Digitales.",
+    ],
+  },
+  {
+    puesto: "Desarrollador web",
+    empresa: "Academia Global (Remoto)",
+    fecha: "Feb 2022 – Nov 2023",
+    responsabilidades: [
+      "Creación de plataformas educativas usando como LMS a Moodle.",
+      "Diseñe y desarrolle un módulo de exámenes que redujo la deshonestidad académica entre los alumnos, garantizando mayor integridad en las evaluaciones.",
+      "Creación de landing pages corporativas.",
+    ],
+  },
+  {
+    puesto: "Becario",
+    empresa: "Universidad Politécnica de Gómez Palacio",
+    fecha: "Ene 2021 – Abr 2021",
+    responsabilidades: [
+      "Análisis de requerimientos.",
+      "Creación de API RESTful.",
+      "Encriptación de datos y autenticación con JWT.",
+    ],
+  },
+];
+
+const habilidades = {
+  tecnologias: ["SQL", "JS", "Astro", "PHP", "NodeJS", "Socket.io", "HTML", "CSS", "GCP recaptcha", "Mercado Pago Checkout Pro"],
+  blandas: ["Trabajo en equipo", "Analítico", "Resiliente", "Adaptable"],
+  idiomas: ["Español: Nativo", "Inglés: Intermedio"],
+  intereses: ["IA en finanzas personales", "Developer experience", "Estoicismo", "Bienestar físico/emocional"],
+};
+---
+
+<style global>
+.cv-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Georgia, serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.cv-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.cv-header h1 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.cv-header p {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.cv-section {
+  margin-bottom: 1.5rem;
+}
+.cv-section h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.cv-experience-item {
+  margin-bottom: 1rem;
+}
+.cv-experience-item .title {
+  font-weight: bold;
+}
+.cv-experience-item .subtitle {
+  font-style: italic;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.cv-list {
+  list-style: disc inside;
+  margin-left: 1.25rem;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.cv-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  font-size: 0.875rem;
+}
+</style>
+
+<article class="cv-container">
+  <header class="cv-header">
+    <h1>Jonathan Alexis Martínez Juárez</h1>
+    <p>Gómez Palacio, Durango, México, 35015 · <a href="mailto:jo.alxs.developer@gmail.com" style="text-decoration:underline; color:inherit;">jo.alxs.developer@gmail.com</a> · +52-871-287-4572</p>
+  </header>
+
+  <section class="cv-section">
+    <h2>Educación</h2>
+    <p><strong>Ingeniería en Tecnologías de la Información</strong></p>
+    <p>Universidad Politécnica de Gómez Palacio · 2017–2021</p>
+  </section>
+
+  <section class="cv-section">
+    <h2>Experiencia Profesional</h2>
+    {experiencia.map(item => (
+      <div class="cv-experience-item">
+        <p class="title">{item.puesto}</p>
+        <p class="subtitle">{item.empresa} · {item.fecha}</p>
+        <ul class="cv-list">
+          {item.responsabilidades.map(r => <li>{r}</li>)}
+        </ul>
+      </div>
+    ))}
+  </section>
+
+  <section class="cv-section">
+    <h2>Habilidades</h2>
+    <div class="cv-grid-2">
+      <div>
+        <h3 style="font-weight:600; margin-bottom:0.5rem;">Técnicas</h3>
+        <ul class="cv-list">
+          {habilidades.tecnologias.map(t => <li>{t}</li>)}
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-weight:600; margin-bottom:0.5rem;">Blandas</h3>
+        <ul class="cv-list">
+          {habilidades.blandas.map(s => <li>{s}</li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cv-section">
+    <h2>Idiomas e Intereses</h2>
+    <p><strong>Idiomas:</strong> {habilidades.idiomas.join(", ")}</p>
+    <p><strong>Intereses:</strong> {habilidades.intereses.join(", ")}</p>
+  </section>
+</article>
